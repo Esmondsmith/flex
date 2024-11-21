@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+
+/* Navbar */
+.navbar {
+    background-color:  #2c3e50;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .user-menu span i {
+    color: #fff;
+}    
+.navbar .user-menu span {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navbar h2 {
+    color: #B5E61D;
+}
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  /* Basic styling for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  /* Hide the dropdown content initially */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 1;
+  }
+  /* Style the links inside the dropdown */
+  .dropdown-menu a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+  }
+  .dropdown-menu a:hover {
+    background-color: #ff7200
+  }
+  /* Toggle dropdown on click */
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+  
+  /* SIDEBAR STYLING STARTS  HERE */
+  .sidebar {
+    /* width: 250px; */
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .menu li {
+    margin: 20px 0;
+  }
+  
+  .sidebar .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .menu li a i {
+    margin-right: 10px;
+  }
+  
+  /* SIDEBAR DROPDOWN STYLES */
+  .sidebar a, .drop-link {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .sidebar-dropdown-div {
+    display: none;
+    background-color: #ff7200;
+    padding-left: 8px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-section {
+    padding: 2px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #2c3e50;
+    font-size: 14px;
+  }
+  
+  .module-title {
+    flex: 1 1 100%; /* Make the element take up the full width of the row */
+    max-width: 100%; /* Optional, but it ensures it doesn't shrink */
+    margin-bottom: 10px; /* Add spacing below */
+    font-size: 20px;
+
+}
+
+  /* Stats Section */
+.stats {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+.stat-box {
+    flex: 1 1 calc(25% - 10px); /* 20% width minus gap for five items per row */
+    max-width: 200px; /* Enforce the max width */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background 0.7s, transform 0.7s;
+    text-decoration: none;
+    color: #ff7200;
+
+    svg{fill: #ff7200;}
+    cursor: pointer;
+    border: 1px solid #ff7200;
+}
+.stat-box:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+    color: #fff; 
+    background-color: #ff7200;
+    transition: .5s ease-in-out;
+        svg{
+            fill: #fff;
+        }
+    
+}
+ 
+.stat-box p {
+    font-size: 14px;
+}
+
+.stats2 {
+    border-top: 2px solid #ff7200;
+    /* border-top: 3px solid rgb(66, 64, 64); */
+}
+
+.stats2 a{
+  background-color: #B5E61D;
+  border: none;
+}
+
+/* Content Area */
+.others-content {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Responsive Styling */
+@media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      position: fixed;
+      height: 100%;
+      width: 200px;
+      transform: translateX(-100%);
+      z-index: 10;
+    }
+  
+    /* Sidebar Toggler */
+    .sidebar-active .sidebar {
+      transform: translateX(0);
+    }
+  
+    .navbar {
+      justify-content: space-between;
+    }
+  
+    .navbar h2 {
+      flex: 1;
+    }
+  
+    .navbar .user-menu {
+      display: flex;
+      align-items: center;
+    }
+  
+    .stats {
+      flex-direction: column;
+    }
+  
+    .stat-box {
+      margin: 10px 0;
+    }
+  }
+
+  footer p{
+    text-align: center;
+    font-size: 12px;
+    color: rgb(138, 131, 131);;
+  }

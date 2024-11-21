@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landingpage design</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/flexlogo3.png" width="120px" height="50px"  alt="">
+            </div>
+            <div class="menu">
+                <ul id="sidemenu">
+                    <li> <a href="#">Home</a> </li>
+                    <li> <a href="#">About</a> </li>
+                    <li> <a href="#">Service</a> </li>
+                    <li> <a href="#">Contact <i class='bx bxs-user' style="font-size: 18px; margin-left: 5px;" ></i></a> </li>
+                    <i class='bx bx-x bars' onclick="closemenu()"></i>
+                </ul>
+                <i class='bx bx-menu bars' onclick="openmenu()"></i>
+            </div>
+            <!-- <div class="search">
+                <input type="search" class="search-input" placeholder="Type Here" id="">
+                <a href="#"> <button class="btn">Search</button> </a>
+            </div> -->
+        </div>
+
+        <div class="content">
+            <div class="form">
+                <h3>Enter Client ID</h3>
+                <div class="form-input">
+                    <input type="text" name="text" required>
+                    <label>Enter ID</label>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="form-btn">
+                    <button type="submit" class="btn btn-continue"> Continue </button>
+                </div>           
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                Copyright &copy; 2024 CompuClick Software Ltd. www.theflexsoft.com. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        var sideMenu = document.getElementById('sidemenu');
+        function openmenu(){
+            sideMenu.style.right = "0";
+        }
+        function closemenu(){
+            sideMenu.style.right = "-400px";
+        }
+    </script>
+   
+    </script>
+</body>
+</html>

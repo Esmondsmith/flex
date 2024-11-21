@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTORY DASHBOARD</title>
+    <link rel="stylesheet" href="admin.css">
+    <script type="text/javascript" src="admin.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google icons svg used -->
+</head>
+<body>
+<header id="top-header">
+    <div class="top-logo">
+        <img src="img/flexlogo1.png" alt="company logo" width="80" height="40">
+    </div>
+    <div class="admin-pics">
+        <img src="img/pro2.png" alt="admin photo" width="40" height="40" >        
+        <span class="dropdown">
+            Admin
+            <i class="fa-solid fa-chevron-down"></i>
+            <div class="dropdown-menu">
+              <a href="#settings"><i class="fa-solid fa-lock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
+              <a href="#"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Logout</a>
+            </div>
+        </span> 
+    </div>
+</header>
+<div class="body-wrapper">
+    
+    <aside id="sidebar">
+        <ul>
+            <li>
+                <span class="back-home">
+                    <a href="module.html"> INVENTORY <br> DASHBOARD </a>
+                </span>
+                <button id="toggle-btn" onclick=toggleSidebar()>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                </button>
+            </li>
+            <li >
+                <a href="module.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#5f6368"><path d="M627-520h133v-160H627v160Zm-214 0h133v-160H413v160Zm-213 0h133v-160H200v160Zm0 240h133v-160H200v160Zm213 0h133v-160H413v160Zm214 0h133v-160H627v160Zm-507 0v-400q0-33 23.5-56.5T200-760h560q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H200q-33 0-56.5-23.5T120-280Z"/></svg>
+                <span>Module List</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#5f6368"><path d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z"/></svg>
+                <span>Home</span>
+                </a>
+            </li>
+            <li style="position: relative;">
+                <a href="Notification.html" title="View all notification">
+                <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#5f6368"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
+                <span class="notice">3</span>
+                <span>Notification</span>
+                </a>
+            </li>
+            <li>
+                <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M520-400h80v-120h120v-80H600v-120h-80v120H400v80h120v120ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+                    <span>Settings</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div> 
+                        <li> <a href="#">Folder</a> </li>
+                        <li> <a href="#">Document</a> </li>
+                        <li> <a href="#">Project</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/></svg>
+                    <span>Stocks</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li> <a href="#">Work</a> </li>
+                        <li> <a href="#">Private</a> </li>
+                        <li> <a href="#">Coding</a> </li>
+                        <li> <a href="#">Writing</a> </li>
+                        <li> <a href="#">Journal</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/></svg>
+                    <span>Transactions</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li> <a href="#">Work</a> </li>
+                        <li> <a href="#">Private</a> </li>
+                        <li> <a href="#">Coding</a> </li>
+                        <li> <a href="#">Writing</a> </li>
+                        <li> <a href="#">Journal</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/></svg>
+                    <span>Reports</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li> <a href="#">Work</a> </li>
+                        <li> <a href="#">Private</a> </li>
+                        <li> <a href="#">Coding</a> </li>
+                        <li> <a href="#">Writing</a> </li>
+                        <li> <a href="#">Journal</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li style="position: relative;">
+                <a href="calendar.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                <span id="calendar-notice"> </span>
+                <span>Account Year</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <div class="container">
+            <h2>INVENTORY MODULE</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus reiciendis, magnam quos animi adipisci blanditiis culpa, officia consequuntur ratione voluptatum neque inventore earum quidem, nisi ad repudiandae sapiente officiis consequatur deleniti. Itaque blanditiis quasi accusantium ad sit tempora eum dolores commodi doloremque, reprehenderit, minima recusandae, quaerat rem in! Porro temporibus saepe sunt sed pariatur excepturi sint voluptatibus officia cum, perspiciatis quos vel, culpa ducimus sequi voluptatem laboriosam deleniti nemo veniam debitis? Nesciunt asperiores iste consequuntur natus laboriosam, dignissimos maxime voluptatum id repellendus, eius commodi! Facere consequatur voluptatum odit tempore, minus laborum vel perspiciatis magnam ex aspernatur iure consequuntur voluptatem ut ipsum dignissimos, quos, maxime ullam quod itaque. Natus aliquid doloribus eos laudantium, dolores sint quod, sed, expedita atque quos sit esse itaque magnam vel tenetur amet delectus fugit ut aut illo quasi quibusdam. Quod consectetur earum provident hic illo numquam? Nobis corrupti praesentium inventore et unde ipsum, deleniti rerum nostrum!</p>
+        </div>
+    </main>
+</div>    
+</body>
+</html>
