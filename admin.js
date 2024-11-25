@@ -37,15 +37,37 @@ function closeAllSubMenus(){
     })
 }
 
+const topDropdown = document.querySelector('.notice-bell-dropdown');
+topDropdown.addEventListener('click', function () {
+  // Toggle the 'active' class to show/hide the dropdown
+  topDropdown.classList.toggle('active');
+});
+document.addEventListener('click', function (event) {
+    if (!topDropdown.contains(event.target)) {
+      topDropdown.classList.remove('active');
+    }
+});
+
 // Top navigation bar dropdown
 const dropdown = document.querySelector('.dropdown');
 dropdown.addEventListener('click', function () {
   // Toggle the 'active' class to show/hide the dropdown
   dropdown.classList.toggle('active');
 });
+// Close the dropdown if clicked outside
+document.addEventListener('click', function (event) {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('active');
+    }
+});
 
-
+  
 // Get current year
 const currentYear = new Date().getFullYear();
 console.log(currentYear);
 document.getElementById('calendar-notice').textContent = currentYear;
+
+
+const currentYear2 = new Date().getFullYear();
+console.log(currentYear2);
+document.getElementById('notice-bell-drop').textContent = currentYear;

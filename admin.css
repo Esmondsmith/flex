@@ -42,21 +42,65 @@ html {
 }
 .admin-pics img{
     border-radius: 50%; 
-    margin-top: 10px;
-    /* border: 1px solid var(--primary-text-clr); */
+    /* margin-top: 15px; */
+}
+.admin-pics .notice-bell-dropdown{
+    margin-top: 30px;
+}
+.vertical-line{
+    border-left: 3px solid lightgrey;
+    height: 40px;
+    position: absolute;
+    left: 50px;
+    margin: 0px 20px;
+    top: 10px;
 }
 .admin-pics span{
     color: black;
     font-size: 16px;
 }
 .admin-pics a{
-    margin-right: 20px;
+    margin-right: 50px;
     margin-top: 10px;
     color: white;
     font-size: 16px;
 }
+/* Top bar dropdown */
+.notice-bell-dropdown{
+    position: relative;
+    bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.notice-bell-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 1;
+}
+.notice-bell-menu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    width: 100%;
+}
+.notice-bell-menu a:hover {
+    background-color: var(--primary-text-clr);
+    color: white;
+}
+.notice-bell-dropdown.active .notice-bell-menu {
+    display: block;
+}
 
-/* Basic styling for the dropdown */
+/* Basic styling for the admin user dropdown */
 .dropdown {
     position: relative;
     bottom: 10px;
@@ -115,6 +159,26 @@ html {
     display: flex;
     justify-content: end; 
 } */
+.top-notice {
+    text-align: center;
+    width: 30px;
+    height: 12px;
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    padding: 1px;
+    position: absolute;
+    bottom: 23px;
+    left: 18px;
+    /* font-size: 8px; */
+    line-height: 11px;
+}
+
+.more-details span {
+    color: white;
+    font-size: 10px;
+}
 
 .notice {
     text-align: center;
@@ -152,9 +216,9 @@ html {
     
     box-sizing: border-box;
     height: 100vh;
-    width: 250px;
+    width: 300px;
     padding: 5px 1em;
-    background-color: var(--base-clr);
+    background-color: var(--hover-clr);
     border-right: 1px solid var(--line-clr);
 
 /* To control the scroll behaviour so only the main content scroll without the sidebar */
@@ -239,7 +303,12 @@ html {
     rotate: 180deg;
 }
 #sidebar .sub-menu a {
-    padding-left: 55px;
+    padding-left: 45px;
+    font-size: 14px;
+}
+#sidebar .sub-menu a:hover {
+    /* border: 1px solid white; */
+    background-color: var(--line-clr);
 }
 #toggle-btn {
     margin-left: auto;
@@ -274,14 +343,13 @@ main p {
     border-radius: 0px;
     margin-bottom: 20px;
     padding: min(3em, 15%);
-    background-color: #fff;
+    background-color: var(--hover-clr);
     height: 100vh;
 
     h2, p {
         margin-top: 1em;
     }
 }
-
 
 
 /* MEDIA QUERY FOR RESPONSIVENESS IN DIFFERENT DEVICES */

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dash2.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <div class="app-icon">
+              <img src="img/flexlogo1.png" width="80" height="50" alt="">
+            </div>
+          </div>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item active">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+                <span>Products</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                  <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                </svg>
+                <span>Statistics</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox">
+                  <polyline points="22 12 16 12 14 15 10 15 8 12 2 12" />
+                  <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+                </svg>
+                <span>Inbox</span>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <span>Notifications</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="app-content">
+          <div class="app-content-header">
+            <h1 class="app-content-headerText">SYSTEM ADMINISTRATION</h1>
+            <button class="mode-switch" title="Switch Theme">
+              <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                <defs></defs>
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="app-content-actions">
+            <div class="app-content-actions-wrapper">
+              <div class="filter-button-wrapper">
+                <button class="action-button filter jsFilter"><span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                  </svg></button>
+                <div class="filter-menu">
+                  <label>Category</label>
+                  <select>
+                    <option>All Categories</option>
+                    <option>Furniture</option>
+                    <option>Decoration</option>
+                    <option>Kitchen</option>
+                    <option>Bathroom</option>
+                  </select>
+                  <label>Status</label>
+                  <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Disabled</option>
+                  </select>
+                  <div class="filter-menu-buttons">
+                    <button class="filter-button reset">
+                      Reset
+                    </button>
+                    <button class="filter-button apply">
+                      Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button class="action-button list active" title="List View">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                  <line x1="8" y1="6" x2="21" y2="6" />
+                  <line x1="8" y1="12" x2="21" y2="12" />
+                  <line x1="8" y1="18" x2="21" y2="18" />
+                  <line x1="3" y1="6" x2="3.01" y2="6" />
+                  <line x1="3" y1="12" x2="3.01" y2="12" />
+                  <line x1="3" y1="18" x2="3.01" y2="18" />
+                </svg>
+              </button>
+              <button class="action-button grid" title="Grid View">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </button>
+              <div class="filter-button-wrapper">
+                <button class="action-button filter jsFilter"><span>Admin</span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff" ><path d="M480-492.31q-51.75 0-87.87-36.12Q356-564.56 356-616.31q0-51.75 36.13-87.87 36.12-36.13 87.87-36.13 51.75 0 87.87 36.13Q604-668.06 604-616.31q0 51.75-36.13 87.88-36.12 36.12-87.87 36.12ZM212-219.69v-72.93q0-18.38 10.96-35.42 10.96-17.04 30.66-29.5 52.3-30.07 109.94-46.11t116.23-16.04q58.59 0 116.44 16.04 57.85 16.04 110.15 46.11 19.7 11.46 30.66 29T748-292.62v72.93H212Zm52-52h432v-20.93q0-6.33-4.56-11.91-4.57-5.58-12.59-9.47-43.7-26.46-94.42-40.08Q533.7-367.69 480-367.69q-53.7 0-104.43 13.61-50.72 13.62-94.42 40.08-8.07 5.54-12.61 10.61-4.54 5.07-4.54 10.77v20.93Zm216.21-272.62q29.79 0 50.79-21.21t21-51q0-29.79-21.21-50.79t-51-21q-29.79 0-50.79 21.22-21 21.21-21 51 0 29.78 21.21 50.78t51 21Zm-.21-72Zm0 344.62Z"/></svg></button>
+                <div class="filter-menu">
+                  <div class="filter-menu-buttons">
+                    Logout
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products-area-wrapper tableView">
+            <div class="products-header">
+              <div class="product-cell image">
+                Welcome Admin!
+              </div>           
+            </div>
+
+            <div class="products-row">
+              <button class="cell-more-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" />
+                </svg>
+              </button>
+              <div class="product-cell image">
+                <img src="https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+                <span>Autumn</span>
+              </div>
+              <div class="product-cell category"><span class="cell-label">Category:</span>Decoration</div>
+              <div class="product-cell status-cell">
+                <span class="cell-label">Status:</span>
+                <span class="status active">Active</span>
+              </div>
+              <div class="product-cell sales"><span class="cell-label">Sales:</span>21</div>
+              <div class="product-cell stock"><span class="cell-label">Stock:</span>46</div>
+              <div class="product-cell price"><span class="cell-label">Price:</span>$252</div>
+            </div>
+            <div class="products-row">
+              <button class="cell-more-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" />
+                </svg>
+              </button>
+              <div class="product-cell image">
+                <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+                <span>Boheme</span>
+              </div>
+              <div class="product-cell category"><span class="cell-label">Category:</span>Furniture</div>
+              <div class="product-cell status-cell">
+                <span class="cell-label">Status:</span>
+                <span class="status active">Active</span>
+              </div>
+              <div class="product-cell sales"><span class="cell-label">Sales:</span>32</div>
+              <div class="product-cell stock"><span class="cell-label">Stock:</span>40</div>
+              <div class="product-cell price"><span class="cell-label">Price:</span>$350</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script src="dash2.js"></script>
+</body>
+</html>

@@ -14,14 +14,28 @@
     <div class="top-logo">
         <img src="img/flexlogo1.png" alt="company logo" width="80" height="40">
     </div>
-    <div class="admin-pics">
-        <img src="img/pro2.png" alt="admin photo" width="40" height="40" >        
+    <div class="admin-pics" style="position: relative;">
+        <span class="notice-bell-dropdown">
+            <a href="#" title="More Details" class="more-details">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
+            <span class="top-notice">More</span>
+                <div class="notice-bell-menu">
+                    <a href="#" style="font-weight: 600;"><i class="fa-solid fa-lock fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp;&nbsp;User Name <br> <p style="text-align: center; color: grey;">Admin</p> </a>
+                    <hr>
+                    <a href="#" style="font-weight: 600;"><i class="fa-solid fa-arrow-trend-up fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp; Account Year<br> <p style="text-align: center; color: grey;" id="notice-bell-drop">2024</p> </a>
+                    <hr>
+                    <a href="#" style="font-weight: 600;"><i class="fa-regular fa-money-bill-1 fa-lg"  style="margin-left: 20px;"></i> &nbsp;&nbsp; Base Currency <br> <p style="text-align: center; color: grey;">Naira</p> </a>
+                </div>
+            </a>
+        </span> 
+        <div class="vertical-line"></div>
         <span class="dropdown">
-            Admin
-            <i class="fa-solid fa-chevron-down"></i>
+            <img src="img/pro2.png" alt="admin photo" width="33" height="33" >        
+            <small>Admin</small>
+            <i class="fa-solid fa-chevron-down fa-xs"></i>
             <div class="dropdown-menu">
-              <a href="#settings"><i class="fa-solid fa-lock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
-              <a href="#"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Logout</a>
+                <a href="#settings"><i class="fa-solid fa-lock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
+                <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Logout</a>
             </div>
         </span> 
     </div>
@@ -32,7 +46,7 @@
         <ul>
             <li>
                 <span class="back-home">
-                    <a href="module.html"> POS <br> DASHBOARD </a>
+                    <a href="#"> POS <br> DASHBOARD </a>
                 </span>
                 <button id="toggle-btn" onclick=toggleSidebar()>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
@@ -59,47 +73,49 @@
             </li>
             <li>
                 <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M520-400h80v-120h120v-80H600v-120h-80v120H400v80h120v120ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M672-288q25 0 42.5-17.5T732-348q0-25-17.5-42.5T672-408q-25 0-42.5 17.5T612-348q0 25 17.5 42.5T672-288Zm-.09 120Q704-168 731-184t43-42q-23-13-48.72-19.5t-53.5-6.5q-27.78 0-53.28 7T570-226q16 26 42.91 42 26.91 16 59 16ZM480-96q-133-30-222.5-150.5T168-515v-229l312-120 312 120v221q-22-10-39-16t-33-8v-148l-240-92-240 92v180q0 49 12.5 96t36.5 88.5q24 41.5 58.5 76T425-194q8 23 25.5 48.5T489-98l-4.5 1-4.5 1Zm191.77 0Q592-96 536-152.23q-56-56.22-56-136Q480-368 536.23-424q56.22-56 136-56Q752-480 808-423.77q56 56.22 56 136Q864-208 807.77-152q-56.22 56-136 56ZM480-480Z"/></svg>
                     <span>Settings</span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </button>
                 <ul class="sub-menu">
                     <div> 
-                        <li> <a href="#">Folder</a> </li>
-                        <li> <a href="#">Document</a> </li>
-                        <li> <a href="#">Project</a> </li>
+                        <li> <a href="#">Entries Definition</a> </li>
+                        <li> <a href="#">POS Parameters</a> </li>
+                        <li> <a href="#">Printer / Receipt Settings</a> </li>
+                        <li> <a href="#">Quick Default POS Entries Settings</a> </li>
                     </div>
                 </ul>
             </li>
             <li>
                 <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M360-600v-72h336v72H360Zm0 120v-72h336v72H360Zm144 312H216h288Zm0 72H240q-40 0-68-28t-28-68v-144h96v-528h576v361q-20 1-38 7t-34 19v-315H312v456h289l-72 72H216v72q0 10.2 6.9 17.1 6.9 6.9 17.1 6.9h264v72Zm72 0v-113l210-209q7.26-7.41 16.13-10.71Q811-432 819.76-432q9.55 0 18.31 3.5Q846.83-425 854-418l44 45q6.59 7.26 10.29 16.13Q912-348 912-339.24t-3.29 17.92q-3.3 9.15-10.71 16.32L689-96H576Zm288-243-45-45 45 45ZM624-144h45l115-115-22-23-22-22-116 115v45Zm138-138-22-22 44 45-22-23Z"/></svg>
                     <span>Transaction</span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li> <a href="#">Work</a> </li>
-                        <li> <a href="#">Private</a> </li>
-                        <li> <a href="#">Coding</a> </li>
-                        <li> <a href="#">Writing</a> </li>
-                        <li> <a href="#">Journal</a> </li>
+                        <li> <a href="#">Customer Management</a> </li>
+                        <li> <a href="#">Sales</a> </li>
+                        <li> <a href="#">Invoice</a> </li>
+                        <li> <a href="#">Receipt</a> </li>
+                        <li> <a href="#">Proforma Invoice</a> </li>
+                        <li> <a href="#">Enter Customer Opening Balances</a> </li>
+                        <li> <a href="#">Enter Customer Loyalty Opening Balances</a> </li>
+                        <li> <a href="#">Manage Price List</a> </li>
+                        <li> <a href="#">Expenses Manager</a> </li>
                     </div>
                 </ul>
             </li>
             <li>
                 <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M168-144q-29 0-50.5-21.5T96-216v-528q0-29.7 21.5-50.85Q139-816 168-816h528q29 0 50.5 21.15T768-744v72h96v72h-96v84h96v72h-96v84h96v72h-96v71.5q0 29.5-21.5 51T696-144H168Zm0-72h528v-528H168v528Zm72-72h192v-144H240v144Zm240-288h144v-96H480v96Zm-240 96h192v-192H240v192Zm240 192h144v-240H480v240ZM168-744v528-528Z"/></svg>
                     <span>Processing</span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li> <a href="#">Work</a> </li>
-                        <li> <a href="#">Private</a> </li>
-                        <li> <a href="#">Coding</a> </li>
-                        <li> <a href="#">Writing</a> </li>
-                        <li> <a href="#">Journal</a> </li>
+                        <li> <a href="#">Repost Sales To General Ledger</a> </li>
+                        <li> <a href="#">Run End Of Year Wizard</a> </li>
                     </div>
                 </ul>
             </li>
@@ -111,11 +127,20 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li> <a href="#">Work</a> </li>
-                        <li> <a href="#">Private</a> </li>
-                        <li> <a href="#">Coding</a> </li>
-                        <li> <a href="#">Writing</a> </li>
-                        <li> <a href="#">Journal</a> </li>
+                        <li> <a href="#">Sales Report Grid</a> </li>
+                        <li> <a href="#">Sales Report Classic</a> </li>
+                        <li> <a href="#">Sales Report</a> </li>
+                        <li> <a href="#">Sales Summary</a> </li>
+                        <li> <a href="#">Sales Analysis</a> </li>
+                        <li> <a href="#">Sales Analysis By Products</a> </li>
+                        <li> <a href="#">Invoice Report</a> </li>
+                        <li> <a href="#">Debtors List</a> </li>
+                        <li> <a href="#">List Customers</a> </li>
+                        <li> <a href="#">Sales Summary By Month</a> </li>
+                        <li> <a href="#">Debtors Payment Report</a> </li>
+                        <li> <a href="#">List Of Undelivered Sales</a> </li>
+                        <li> <a href="#">Generate Customer Incentives</a> </li>
+                        <li> <a href="#">Print Price List</a> </li>
                     </div>
                 </ul>
             </li>
