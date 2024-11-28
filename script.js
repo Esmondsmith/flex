@@ -64,10 +64,8 @@ document.addEventListener('click', function (event) {
   
 // Get current year
 const currentYear = new Date().getFullYear();
-console.log(currentYear);
+// console.log(currentYear);
 document.getElementById('calendar-notice').textContent = currentYear;
 
-
 const currentYear2 = new Date().getFullYear();
-console.log(currentYear2);
-document.getElementById('notice-bell-drop').textContent = currentYear;
+document.getElementById('notice-bell-drop').textContent = currentYear2;

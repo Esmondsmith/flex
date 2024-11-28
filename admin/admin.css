@@ -1,0 +1,426 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    /* border-top: 5px solid #007bff; */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+/* ADMIN DASHBOARD - ENTRIES DEFINITION PAGE STYLING */
+.adminEntriesDef {
+        padding: 20px;
+    }
+    .title {
+        padding-bottom: 30px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .button-container {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .btn {
+        background-color: #ed9c28;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .entry-form-group {
+        margin-bottom: 15px;
+    }
+    .form-label {
+        margin-bottom: 5px;
+        display: block;
+    }
+    .entry-form-control {
+        width: 40%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .entry-form-select{
+      width: 42%;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+
+/* ADMIN DASHBOARD - SYSTEM ADMIN PARAMETERS PAGE STYLING */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+        background-color: dodgerblue;
+        color: white;
+    }
+    .sys-par-setting{
+      font-weight: 200;
+      background-color: #f0eded;
+      padding: 10px 5px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+        h3{
+          margin: 10px 0px;
+          color: black;
+        }
+        button{
+          margin-top: 15px;
+          background-color: #00B2FF;
+          border: none;
+          border-radius: 5px;
+          color: white;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+    }
+    .sys-voucher{
+      background-color: #f0eded;
+      padding: 10px 5px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      h3{
+        margin: 15px 0px;
+        color: black;
+      }
+      table{
+        color: black;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black; 
+      }
+    }
+    .sys-voucher-number{
+      background-color: #f0eded;
+      padding: 10px 5px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+        svg{
+          cursor: pointer;
+        }
+        svg:hover{
+          background-color: #ccc;
+          border-radius: 5px;
+        }
+    }
+    .sys-entry-selection{
+      background-color: #f0eded;
+      padding: 10px 5px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      h3{
+        margin: 15px 0px;
+        color: black;
+      }
+      table{
+        color: black;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black; 
+      }
+      select{
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+
+
+/* ADMIN DASHBOARD - USERS PAGE STYLING */
+.users-manage-user {
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+    h3{
+      margin: 20px 0px;
+      font-size: 20px;
+    }
+    hr{
+      margin-bottom: 30px;
+      /* width: 53%; */
+    }
+}
+.users-form{
+  min-width: 600px;
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+    span{
+      margin-right: 20px;
+      width: 20%;
+        sup{
+          color: red; 
+          font-size: 15px; 
+          font-weight: 600;
+        }
+    }
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+.input-field {
+  padding: 10px;
+  outline: none;
+  width: 30%;
+  border: none;
+}
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+/* Set a style for the buttons */
+.users-botton button{
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.save{
+  background-color: #ed9c28;
+  width: 15%;
+  border-radius: 5px;
+}
+.reset{
+  background-color: #00B2FF;
+  border-radius: 5px;
+}
+.delete{
+  background-color: red;
+  border-radius: 5px;
+}
+
+
+
+/* ADMIN DASHBOARD - AUDIT TRAIL PAGE STYLING */
+.audit-main-content{
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+    h3{
+      margin: 20px 0px;
+      font-size: 20px;
+    }
+    hr{
+      margin-bottom: 40px;
+    }
+}
+
+
+.audit-form{
+  min-width: 600px;
+  }
+  
+  .audit-input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+      span{
+        margin-right: 20px;
+        width: 25%;
+      }
+      input[type='text']{
+        width: 41%;
+        padding: 8px;
+      }
+  }
+  
+  .audit-icon {
+    padding: 6px;
+    background: #ccc;
+    color: rgb(84, 81, 81);
+    min-width: 40px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .audit-input-field{
+    padding: 8px;
+    outline: none;
+    width: 35%;
+    border: none;
+  }
+  .audit-input-field:focus {
+    border: 2px solid #ccc;
+  }
+    /* Set a style for the buttons */
+  .audit-buttons button{
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .search{
+    background-color: #00B2FF;
+    border-radius: 4px;
+  }
+  .print{
+    background-color: #00B2FF;
+    border-radius: 4px;
+  }
+  .exp-excel{
+    background-color: #ed9c28;
+    border-radius: 4px;
+  }
+  .exp-word{
+    background-color: red;
+    border-radius: 4px;
+  }  
+/* Audit table styles */
+.audit-table{
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: black;
+    h3{
+      margin: 20px 0px;
+      font-size: 20px;
+    }
+    hr{
+      margin-bottom: 40px;
+    }
+    table{
+      font-size: 13px;
+      margin: 0;
+    }
+}
+.custom-table-details {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.custom-table-details th, .custom-table-details td {
+    padding: 6px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Breaks long words onto the next line */
+    overflow-wrap: break-word; /* Additional support for word breaking */
+    white-space: normal; /* Allows text wrapping */
+}
+
+.custom-table-details thead {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.custom-table-details tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+/* ADMIN DASHBOARD - COMPANY DETAIL PAGE STYLING */
+.company-save-btn {
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+    button{
+      border: none;
+      background-color: #47a447;
+      padding: 6px 12px;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+    }
+}
+
+.company-main-content{
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  min-height: 500px;
+}
+
+.company-input-container{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+    span{
+      margin-right: 20px;
+      width: 25%;
+      color: black;
+    }
+    input[type='text']{
+      width: 29%;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+    }
+    input[type='file']{
+      color: black;
+      border-radius: 4px;
+    }
+    textarea{
+      width: 31%;
+      border-radius: 4px;
+      border: none;
+    }
+    select{
+      width: 30%;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+    }
+}

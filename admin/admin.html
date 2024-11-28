@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN DASHBOARD</title>
+
     <link rel="stylesheet" href="admin.css">
     <script type="text/javascript" src="admin.js" defer></script>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="text/javascript" src="../script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google icons svg used -->
+
+
 </head>
 <body>
 <header id="top-header">
     <div class="top-logo">
-        <img src="img/flexlogo1.png" alt="company logo" width="80" height="40">
+        <img src="../img/flexlogo1.png" alt="company logo" width="80" height="40">
     </div>
     <div class="admin-pics" style="position: relative;">
         <span class="notice-bell-dropdown">
@@ -20,37 +25,28 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
             <span class="top-notice">More</span>
                 <div class="notice-bell-menu">
-                  <a href="#" style="font-weight: 600;"><i class="fa-solid fa-lock fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp;&nbsp;User Name <br> <p style="text-align: center; color: grey;">Admin</p> </a>
-                  <hr>
-                  <a href="#" style="font-weight: 600;"><i class="fa-solid fa-arrow-trend-up fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp; Account Year<br> <p style="text-align: center; color: grey;" id="notice-bell-drop"></p> </a>
-                  <hr>
-                  <a href="#" style="font-weight: 600;"><i class="fa-regular fa-money-bill-1 fa-lg"  style="margin-left: 20px;"></i> &nbsp;&nbsp; Base Currency <br> <p style="text-align: center; color: grey;">Naira</p> </a>
+                    <a href="#" style="font-weight: 600;"><i class="fa-solid fa-lock fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp;&nbsp;User Name <br> <p style="text-align: center; color: grey;">Admin</p> </a>
+                    <hr>
+                    <a href="#" style="font-weight: 600;"><i class="fa-solid fa-arrow-trend-up fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp; Account Year<br> <p style="text-align: center; color: grey;" id="notice-bell-drop"></p> </a>
+                    <hr>
+                    <a href="#" style="font-weight: 600;"><i class="fa-regular fa-money-bill-1 fa-lg"  style="margin-left: 20px;"></i> &nbsp;&nbsp; Base Currency <br> <p style="text-align: center; color: grey;">Naira</p> </a>
                 </div>
             </a>
         </span> 
         <div class="vertical-line"></div>
         <span class="dropdown">
-            <img src="img/pro2.png" alt="admin photo" width="33" height="33" >        
+            <img src="../img/pro2.png" alt="admin photo" width="33" height="33" >        
             <small>Admin</small>
             <i class="fa-solid fa-chevron-down fa-xs"></i>
             <div class="dropdown-menu">
-              <a href="#settings"><i class="fa-solid fa-lock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
-              <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Logout</a>
+                <a href="#settings"><i class="fa-solid fa-lock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
+                <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Logout</a>
             </div>
         </span> 
     </div>
 </header>
 <div class="body-wrapper">
 
-    <!-- <nav class="inner-nav">
-        <h2>This is nav nav</h2>
-        <div class="admin">
-            <img src="" alt="" width="50" height="50">
-            <span> Admin </span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-        </div>
-    </nav> -->
-    
     <aside id="sidebar">
         <ul>
             <li>
@@ -62,22 +58,15 @@
                 </button>
             </li>
             <li >
-                <a href="module.html" title="Back To Module">
+                <a href="../module.html" title="Back To Module">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#5f6368"><path d="M627-520h133v-160H627v160Zm-214 0h133v-160H413v160Zm-213 0h133v-160H200v160Zm0 240h133v-160H200v160Zm213 0h133v-160H413v160Zm214 0h133v-160H627v160Zm-507 0v-400q0-33 23.5-56.5T200-760h560q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H200q-33 0-56.5-23.5T120-280Z"/></svg>
                 <span>Module List</span>
                 </a>
             </li>
             <li class="active main-sidebar-links">
-                <a href="#">
+                <a href="#" id="homepage">
                 <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#5f6368"><path d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z"/></svg>
                 <span>Home</span>
-                </a>
-            </li>
-            <li style="position: relative;" class="main-sidebar-links">
-                <a href="Notification.html" title="View all notification">
-                <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#5f6368"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
-                <span class="notice">3</span>
-                <span>Notification</span>
                 </a>
             </li>
             <li class="main-sidebar-links">
@@ -88,12 +77,12 @@
                 </button>
                 <ul class="sub-menu">
                     <div> 
-                        <li> <a href="#">Entries Definition</a> </li>
-                        <li> <a href="#">System Admin Parameters</a> </li>
-                        <li> <a href="#">Users</a> </li>
-                        <li> <a href="#">Audit Trail</a> </li>
-                        <li> <a href="#">Base Currency</a> </li>
-                        <li> <a href="#">Company Details</a> </li>
+                        <li> <a href="#" id="entries-definition-link">Entries Definition</a> </li>
+                        <li> <a href="#" id="systemparapage">System Admin Parameters</a> </li>
+                        <li> <a href="#" id="userspage">Users</a> </li>
+                        <li> <a href="#" id="auditpage">Audit Trail</a> </li>
+                        <li> <a href="#" id="currencypage">Base Currency</a> </li>
+                        <li> <a href="#" id="companypage">Company Details</a> </li>
                     </div>
                 </ul>
             </li>
@@ -105,8 +94,8 @@
                 </button>
                 <ul class="sub-menu">
                     <div>
-                        <li> <a href="#">Authorisation Setup</a> </li>
-                        <li> <a href="#">Authorise Transactions</a> </li>
+                        <li> <a href="#" id="authorisesetup">Authorisation Setup</a> </li>
+                        <li> <a href="#" id="authorisetrans">Authorise Transactions</a> </li>
                     </div>
                 </ul>
             </li>
@@ -121,8 +110,14 @@
     </aside>
     <main>
         <div class="container">
-            <h2>SYSTEM ADMINISTRATOR</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus reiciendis, magnam quos animi adipisci blanditiis culpa, officia consequuntur ratione voluptatum neque inventore earum quidem, nisi ad repudiandae sapiente officiis consequatur deleniti. Itaque blanditiis quasi accusantium ad sit tempora eum dolores commodi doloremque, reprehenderit, minima recusandae, quaerat rem in! Porro temporibus saepe sunt sed pariatur excepturi sint voluptatibus officia cum, perspiciatis quos vel, culpa ducimus sequi voluptatem laboriosam deleniti nemo veniam debitis? Nesciunt asperiores iste consequuntur natus laboriosam, dignissimos maxime voluptatum id repellendus, eius commodi! Facere consequatur voluptatum odit tempore, minus laborum vel perspiciatis magnam ex aspernatur iure consequuntur voluptatem ut ipsum dignissimos, quos, maxime ullam quod itaque. Natus aliquid doloribus eos laudantium, dolores sint quod, sed, expedita atque quos sit esse itaque magnam vel tenetur amet delectus fugit ut aut illo quasi quibusdam. Quod consectetur earum provident hic illo numquam? Nobis corrupti praesentium inventore et unde ipsum, deleniti rerum nostrum!</p>
+            <div class="default-page">
+                <h2>SYSTEM ADMINISTRATOR</h2>
+                <p>Use sidebar to navigate through System Administration Page</p>
+            </div>
+           
+            <div id="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+            </div>
         </div>
     </main>
 </div>    

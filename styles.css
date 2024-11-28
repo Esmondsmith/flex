@@ -8,6 +8,14 @@
     --secondary-text-clr: #b0b3c1;
     --primary-text-clr: #ff7200;
 }
+/* color class */
+.pri-color{
+    color: #BBED1E;
+}
+.sec-color{
+    background-color: #3498db; 
+    border-color: #00B2FF; 
+}
 
 * {
     margin: 0;
@@ -139,7 +147,6 @@ html {
     display: block;
 }
 
-
 .body-wrapper {
     /* width: 100%; */
     min-height: 100vh;
@@ -162,11 +169,13 @@ html {
 .top-notice {
     text-align: center;
     width: 30px;
+    /* height: 12px; */
     height: 12px;
     border: 1px solid white;
     background-color: red;
     color: white;
     border-radius: 10%;
+    /* padding: 1px; */
     padding: 1px;
     position: absolute;
     bottom: 23px;
@@ -344,11 +353,10 @@ main p {
     margin-bottom: 20px;
     padding: min(3em, 15%);
     background-color: var(--hover-clr);
-    height: 100vh;
-
-    h2, p {
-        margin-top: 1em;
-    }
+    min-height: 100vh;
+    /* h2, p {
+        margin-top: 10px;
+    } */
 }
 
 

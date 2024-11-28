@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="admin.js" defer></script>
+</head>
+<body>
+    <div class="audit-main-content">
+        <h3>System Auditing</h3>
+        <hr>
+        <form action="#" class="audit-form">
+            <div class="audit-input-container">
+                <span>FROM </span>
+                <i class="fa-regular fa-calendar-days audit-icon"></i>
+                <input type="date" id="todayDate" class="audit-input-field" >
+            </div>
+            <div class="audit-input-container">
+                <span>TO </span>
+                <i class="fa-regular fa-calendar-days audit-icon"></i>
+                <input type="date" class="audit-input-field" >
+            </div>
+            <div class="audit-input-container">
+                <span>Memo Includes</span>
+                <input class="audit-input-field" type="text">
+            </div>
+            <div class="audit-buttons">
+                <button type="submit" class="search">Search</button>
+                <button type="submit" class="print">Print</button>
+                <button type="submit" class="exp-excel">Export to Excel</button>
+                <button type="submit" class="exp-word"> Export to Word</button>
+            </div>
+        
+        </form>
+    </div>
+
+    <div class="audit-table">
+        <h3>Details</h3>
+        <hr>
+        <table class="custom-table-details">
+            <thead>
+                <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 6%;"> 
+                    <col style="width: 8%;"> 
+                    <col style="width: 11%;"> 
+                    <col style="width: 65%;"> 
+                </colgroup>
+                <tr>
+                    <th scope="col">Operation Date/ Time</th>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Trans Source</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Memo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">28/Nov/2024 10:04:15</td>
+                    <td>admin</td>
+                    <td>User Login</td>
+                    <td>Created New POS SALES</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <td scope="row">28/Nov/2024 10:04:21</td>
+                    <td>admin</td>
+                    <td>tdornton</td>
+                    <td>Created New POS SALES</td>
+                    <td>Sales No=2213382/CustomerType=Regular/Cust Code or Name=Regular/Trans Date=28/Nov/2024/Description=POS Sales/Discount=0/VAT=0/Commission=0/NetSalesValue=3100/Tender=3100/Change=0/---Items Created--- StockItemCode=12KG SEMOLINA/Qty=1.00/Price=3100/TotalAmount=3100/Loc Code=main</td>
+                </tr>
+                <tr>
+                    <td scope="row">28/Nov/2024 10:52:36</td>
+                    <td >Larry the Bird</td>
+                    <td>POS SALES</td>
+                    <td>Created New POS SALES</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <td scope="row">28/Nov/2024 10:52:36</td>
+                    <td >Larry the Bird</td>
+                    <td>@twitter</td>
+                    <td>@twitter</td>
+                    <td>Sales No=2213382/CustomerType=Regular/Cust Code or Name=Regular/Trans Date=28/Nov/2024/Description=POS Sales/Discount=0/VAT=0/Commission=0/NetSalesValue=3100/Tender=3100/Change=0/---Items Created--- StockItemCode=12KG SEMOLINA/Qty=1.00/Price=3100/TotalAmount=3100/Loc Code=main</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
