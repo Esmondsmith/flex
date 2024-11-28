@@ -37,44 +37,56 @@
 
 /* ADMIN DASHBOARD - ENTRIES DEFINITION PAGE STYLING */
 .adminEntriesDef {
-        padding: 20px;
+  padding: 20px;
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+    h2{
+      color: black;
+      padding-bottom: 30px;
     }
-    .title {
-        padding-bottom: 30px;
-    }
-    .form {
-        display: flex;
-        flex-direction: column;
-    }
-    .button-container {
-        display: flex;
-        margin-bottom: 15px;
-    }
-    .btn {
-        background-color: #ed9c28;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    .entry-form-group {
-        margin-bottom: 15px;
-    }
-    .form-label {
-        margin-bottom: 5px;
-        display: block;
-    }
-    .entry-form-control {
-        width: 40%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    .entry-form-select{
-      width: 42%;
-      padding: 10px;
-      border-radius: 4px;
-    }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  background-color: #ed9c28;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.entry-form-group {
+  margin-bottom: 15px;
+}
+.form-label {
+  margin-bottom: 5px;
+  display: block;
+  color: black;
+}
+.entry-form-control {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.entry-form-control:focus{
+  border-color: #ed9c28;
+  outline: none;
+}
+.entry-form-select{
+  width: 42%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.entry-form-select:focus{
+  border-color: #ed9c28;
+}
 
 
 /* ADMIN DASHBOARD - SYSTEM ADMIN PARAMETERS PAGE STYLING */
@@ -351,6 +363,7 @@
 .custom-table-details th, .custom-table-details td {
     padding: 6px;
     text-align: left;
+    vertical-align: top; 
     border: 1px solid #ddd;
     word-wrap: break-word; /* Breaks long words onto the next line */
     overflow-wrap: break-word; /* Additional support for word breaking */

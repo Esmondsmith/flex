@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* INVENTORY MODULE  - ENTRIES DEFINITION PAGE STYLING */
+.adminEntriesDef {
+    padding: 20px;
+    background-color: #f0eded;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+      h2{
+        color: black;
+        padding-bottom: 30px;
+      }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn {
+    background-color: #ed9c28;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 40px;
+  }
+  .btn:hover{
+    background-color: #f0ad4e;;
+  }
+  .entry-form-group {
+    margin-bottom: 15px;
+  }
+  .form-label {
+    margin-bottom: 5px;
+    display: block;
+    color: black;
+  }
+  .entry-form-control {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .entry-form-control:focus{
+    border-color: #ed9c28;
+    outline: none;
+  }
+  .entry-form-select{
+    width: 42%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .entry-form-select:focus{
+    border-color: #ed9c28;
+  }
+  
+  
+
+/* INVENTORY MODULE - INVENTORY SYSTEM ADMIN PARAMETERS PAGE STYLING */
+.invent-par-setting{
+    font-weight: 200;
+    background-color: #f0eded;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    h3{
+        margin: 20px 0px;
+        color: black;
+    }
+    .button-container{
+        margin: 10px 0px;
+    }
+    button{
+        margin-top: 15px;
+        background-color: dodgerblue;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover{
+        background-color:  #00B2FF;;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: dodgerblue;
+    color: white;
+}
+.sys-voucher{
+    background-color: #f0eded;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+      h3{
+         margin: 15px 0px;
+         color: black;
+      }
+      table{
+         color: black;
+      }
+      th, td {
+         padding: 8px;
+         text-align: left;
+         border: 1px solid black; 
+      }
+}
+.sys-voucher-number{
+    background-color: #f0eded;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+      svg{
+        cursor: pointer;
+      }
+      svg:hover{
+        background-color: #ccc;
+        border-radius: 5px;
+      }
+}
+.sys-entry-selection{
+    background-color: #f0eded;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    h3{
+        margin: 15px 0px;
+        color: black;
+    }
+    table{
+        color: black;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black; 
+    }
+    select{
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+/* Testing ***************************************************************/
+.inline-flex {
+    display: inline-flex;
+}
+.gap {
+    gap: 0.5rem; /* Adjust as needed */
+}
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+}
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    background-color: #f0eded;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: black;
+    margin-top: -35px;
+    /* transition: ease-in; */
+}
