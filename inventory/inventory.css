@@ -90,6 +90,24 @@
         background-color:  #00B2FF;;
     }
 }
+/* inventory dropdown voucher prefix*/
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+}
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    background-color: #f0eded;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: black;
+    margin-top: -35px;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -156,28 +174,260 @@ th {
 }
 
 
-/* Testing ***************************************************************/
-.inline-flex {
-    display: inline-flex;
+/* INVENTORY MODULE - INVENTORY STOCK ITEM MANAGEMENT STYLING */
+/* Set a style for the buttons */
+.stock-item-buttons{
+  margin-bottom: 50px;
 }
-.gap {
-    gap: 0.5rem; /* Adjust as needed */
+.stock-item-buttons button{
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
 }
-.collapse {
-    display: none;
+.save{
+  background-color: green;
+  border-radius: 4px;
+}
+.delete{
+  background-color: #cc0000;
+  border-radius: 4px;
+}
+.load{
+  background-color: dodgerblue;
+  border-radius: 4px;
+}  
+
+.stock-item-main-content{
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+    h3{
+      margin: 20px 0px;
+      font-size: 20px;
+    }
+    hr{
+      margin-bottom: 40px;
+    }
+}
+.stock-item-form{
+  min-width: 600px;
+}
+.stock-item-input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+    span{
+      width: 20%;
+        sup{
+          color: #cc0000 ;
+          font-weight: 700;
+        }
+    }
+    input[type='search']{
+      width: 41%;
+      padding: 8px;
+    }
+    button{
+      margin-left: 15px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: #ccc;
+      padding: 0px 3px;
+    }
+}
+  
+.stock-item-icon {
+  padding: 6px;
+  background: #ccc;
+  color: rgb(84, 81, 81);
+  min-width: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+  
+.stock-item-input-field, .stock-item-select-field{
+  padding: 8px;
+  outline: none;
+  width: 35%;
+  border: none;
+}
+.stock-item-input-field:focus, .stock-item-select-field:focus {
+  border: 2px solid #ccc;
+}
+.stock-item-card {
+  border-radius: 0.25rem;
+  background-color: #f0eded;
+  border-radius: 5px;
+  color: black;
+  margin-top: -35px;
+    h3{
+      margin-top: 80px;
+    }
 }
 
-.collapse.show {
-    display: block;
+.stock-item-navigation{
+  background-color: #f0eded;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+    hr{
+      margin: 20px 0px;
+    }
+    .navigation{
+      background-color: #cc0000 ;
+      border-radius: 5px;
+    }
+    button{
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      color: white;
+    }
 }
-.card {
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-    background-color: #f0eded;
-    padding: 10px 5px;
+  /* Navigation Buttons */
+.nav-btn {
+    padding: 5px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
     border-radius: 5px;
-    margin-bottom: 30px;
-    color: black;
-    margin-top: -35px;
-    /* transition: ease-in; */
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
 }
+.nav-btn:hover {
+    background-color: white;
+    color: #cc0000;
+}
+.nav-btn:active {
+  background-color: white;
+  color: #cc0000;
+}
+/* Pages */
+.page {
+    display: none;
+    /* text-align: center; */
+    animation: fadeIn 0.5s ease; 
+}
+.page.active {
+    display: block; /* Show the active page */
+}
+
+/* for all three sub pages body styles */
+.sub-page-1 {
+  border-radius: 0.25rem;
+  background-color: #f0eded;
+  border-radius: 5px;
+  color: black;
+    h3{
+      margin-top: 30px;
+      border: 2px solid red;
+      text-align: left;
+      padding: 5px;
+      width: 25%;
+      font-size: 16px;
+    }
+}
+.sub-page-1input{
+  display: flex;
+  margin-bottom: 15px;
+  span{
+    width: 30%;
+    text-align: start;
+    font-size: 16px;
+      sup{
+        color: #cc0000 ;
+        font-weight: 700;
+      }
+  }
+  input {
+    padding: 8px;
+    outline: none;
+    width: 35%;
+    border: none;
+    border-radius: 6px;
+  }
+  select{
+    padding: 8px;
+    outline: none;
+    width: 30%;
+    border: none;
+    border-radius: 6px;
+  } 
+}
+
+/* sub-page-2-styling */
+.sub-page-2-form{
+  min-width: 600px;
+  margin-top: 50px;
+  }
+  .sub-page-2-inputs {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+      span{
+        text-align: start;
+        margin-right: 20px;
+        width: 25%;
+      }
+  }
+  .sub-page-2-select{
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+      span{
+        margin-right: 20px;
+        width: 25%;
+        text-align: start;
+      }
+  }
+  .select-field{
+    padding: 8px;
+    outline: none;
+    width: 57%;
+    border: none;
+    border-radius:5px;
+  }
+  .input-field{
+    padding: 8px;
+    outline: none;
+    width: 55%;
+    border: none;
+    border-radius:5px;
+  }
+  .input-field:focus {
+    border: 2px solid #ccc;
+  }
+  .sub-page2-buttons{
+    display: flex;
+    justify-content: start;
+    button{
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+  .display{
+    background-color: green;
+  }
+  .print{
+    background-color: dodgerblue;
+  }
+  /* For sub-page 3 styling */
+  .sub-page-3{
+    text-align: start;
+    margin-top: 50px;
+  }

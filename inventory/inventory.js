@@ -2,9 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeLink = document.getElementById('homepage');
     const entriesDefinitionLink = document.getElementById('entriesDef');
     const inventoryParaLink = document.getElementById('inventoryPar');
+    const stockMagt = document.getElementById('stockItemMgt');
+    const stockTake = document.getElementById('stockTake');
+    const barcode = document.getElementById('barcode');
+    const openingStockBal = document.getElementById('openingStockTags');
+
 
     const container = document.querySelector('.container');
-    const defaultPage = document.querySelector('.default-page');
+    const defaultPage = document.querySelector('.defaultPage');
   
     function loadPage(url) {
       if (defaultPage) {
@@ -27,18 +32,34 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
   
-    // Handle the "Entries Definition" link click
+    // To handle inventory settings
     entriesDefinitionLink.addEventListener('click', (event) => {
       event.preventDefault();
       loadPage('entriesDef.html');
     });
-  
-     // Handle the "system parameters" link click
-     inventoryParaLink.addEventListener('click', (event) => {
+    inventoryParaLink.addEventListener('click', (event) => {
       event.preventDefault();
       loadPage('inventPara.html');
-      });
-  
+    });
+
+    //To handle inventory stocks
+    stockMagt.addEventListener('click', (event) => {
+      event.preventDefault();
+      loadPage('stockItemMgt.html');
+    });
+    stockTake.addEventListener('click', (event) => {
+      event.preventDefault();
+      loadPage('stockTake.html');
+    });
+    barcode.addEventListener('click', (event) => {
+      event.preventDefault();
+      loadPage('barcode.html');
+    });
+    openingStockBal.addEventListener('click', (event) => {
+      event.preventDefault();
+      loadPage('openingStocks.html');
+    });
+
     // Handle the "Home" link click
     homeLink.addEventListener('click', (event) => {
       event.preventDefault();
@@ -50,10 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 });
-  
 
-//Module collapse down and expand 
-function toggleCollapse() {
-    var collapseElement = document.getElementById('voucherDropId');
-    collapseElement.classList.toggle('show');
+function toggleCollapseStockItems() {
+  var collapseElement = document.getElementById('voucherDropId');
+  var stockBtnText = document.getElementById('stockBtn');
+  if(collapseElement.classList.toggle('show')){
+    stockBtnText.innerHTML = "Close <i class='fa-solid fa-circle-chevron-up'></i>"
+  } else {
+    stockBtnText.innerHTML = "Expand <i class='fa-solid fa-circle-chevron-down'></i>"
+  }
+  // collapseElement.classList.toggle('show');
 }
+

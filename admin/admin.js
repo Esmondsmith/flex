@@ -97,10 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
   
-
 // Getting the full date for Audit Trail Page.
 var field = document.querySelector('#todayDate');
 var date = new Date();
 field.value = (date.getMonth() + 1).toString().padStart(2, 0) + '-' + date.getDate().toString().padStart(2, 0); + '-' + date.getFullYear().toString()  
 
+//Module collapse down and expand 
+function toggleCollapse() {
+  var collapseElement = document.getElementById('voucherDropId');
+  collapseElement.classList.toggle('show');
+}
   

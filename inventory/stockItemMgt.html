@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Item Management</title>
+ 
+</head>
+<body>
+    <div class="stock-item-main-content">
+        <h3>Stock Item Management</h3>
+        <hr>
+        <form id="formContainer" class="stock-item-form">
+            <div class="stock-item-buttons">
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="delete">Delete</button>
+                <button type="submit" class="load"> Load Stock Items From Excel</button>
+            </div>
+            <div class="stock-item-input-container">
+                <span>Item Code <sup>*</sup> </span>
+                <i class="fa-solid fa-magnifying-glass stock-item-icon"></i>
+                <input type="search" id="searchItem" class="stock-item-input-field" >
+                <button onclick="toggleCollapseStockItems()" id="stockBtn"> Expand <i class="fa-solid fa-circle-chevron-down"></i> </button>
+            </div>        
+            <div class="collapse" id="voucherDropId">
+                <div class="stock-item-card">
+                    <form action="" id="hidden-form">
+                        <h3>Voucher Lookup Box</h3>
+                        <hr>
+                        <div class="stock-item-input-container">
+                            <span>Item Code </span>
+                            <input type="text" class="stock-item-input-field" >
+                        </div>
+                        <div class="stock-item-input-container">
+                            <span>Description </span>
+                            <input type="text" class="stock-item-input-field" >
+                        </div>
+                        <div class="stock-item-input-container">
+                            <span>Item Group: </span>
+                            <select name="" class="stock-item-select-field">
+                                <option value="">Bags</option>
+                                <option value="">Chicken Flavour</option>
+                                <option value="">Database</option>
+                                <option value="">Laptop</option>
+                                <option value="">Leather</option>
+                                <option value="">Paracetamol</option>
+                                <option value="">Stock Item</option>
+                                <option value="">Syrup</option>
+                                <option value="">Table</option>
+                                <option value="">vv</option>
+                            </select>
+                        </div>
+                        <div class="stock-item-input-container">
+                            <span>Item Sub Group: </span>
+                            <select name="" class="stock-item-select-field">
+                                <option value="">Chair</option>
+                                <option value="">GSM</option>
+                                <option value="">Rubber</option>
+                                <option value="">Stock Item</option>
+                                <option value="">Table</option>
+                            </select>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="stock-item-navigation">
+        <hr>
+        <div class="navigation">
+            <button class="nav-btn" id="page1Btn" data-target="page1">Stock Item Details</button>
+            <button class="nav-btn" id="page2Btn" data-target="page2">Stock Item Transaction</button>
+            <button class="nav-btn" id="page3Btn" data-target="page3">Images</button>
+        </div>
+        <div class="pages">
+            <div id="page1" class="page active">
+                <div class="sub-page-1">
+                    <form id="hidden-form">
+                        <h3> <input type="checkbox" name="" id=""> Create as Serialised Item</h3>
+                        <hr>
+                        <div class="sub-page-1input">
+                            <span>Item Description <sup>*</sup></span>
+                            <input type="text" >
+                        </div>
+                        <div class="sub-page-1input">
+                            <span>Item Sizes (Seperate with comma) <sup>*</sup></span>
+                            <input type="text" >
+                        </div>
+                        <div class="sub-page-1input">
+                            <span>Item Group </span>
+                            <select name="">
+                                <option value="">Bags</option>
+                                <option value="">Chicken Flavour</option>
+                                <option value="">Database</option>
+                                <option value="">Laptop</option>
+                                <option value="">Leather</option>
+                                <option value="">Paracetamol</option>
+                                <option value="">Stock Item</option>
+                                <option value="">Syrup</option>
+                                <option value="">Table</option>
+                                <option value="">vv</option>
+                            </select>
+                        </div>
+                        <div class="sub-page-1input">
+                            <span>Reorder Level <sup>*</sup> </span>
+                            <input type="text" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Danger Level <sup>*</sup> </span>
+                            <input type="text" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Manufacture Date <sup>*</sup> </span>
+                            <input type="date" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Unit Of Measure <sup>*</sup> </span>
+                            <input type="text" >
+                        </div>  
+                        <div class="sub-page-1input">
+                            <span>UPC <sup>*</sup></span>
+                            <input type="text" >
+                        </div>
+                        <div class="sub-page-1input">
+                            <span>Item Sub Group</span>
+                            <select name="">
+                                <option value="">Chair</option>
+                                <option value="">GSM </option>
+                                <option value="">Rubber</option>
+                                <option value="">Stock Item</option>
+                                <option value="">Table</option>
+                            </select>
+                        </div>
+                        <div class="sub-page-1input">
+                            <span>Reserve Level<sup>*</sup> </span>
+                            <input type="text" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Maximum Level </span>
+                            <input type="text" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Expiration Date </span>
+                            <input type="date" >
+                        </div> <div class="sub-page-1input">
+                            <span>Alt Unit Of Measure</span>
+                            <input type="text" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Opening Balance </span>
+                            <input type="text" >
+                        </div> 
+                        <div class="sub-page-1input">
+                            <span>Opening Balance Location</span>
+                            <select name="">
+                                <option value="">Branch Office</option>
+                                <option value="">Main Store</option>
+                                <option value="">Wharehouse</option>
+                            </select>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+            <div id="page2" class="page">
+                <div class="sub-page-2">
+                    <form action="#" class="sub-page-2-form">
+                        <div class="sub-page-2-inputs">
+                            <span>FROM </span>
+                            <input type="date" class="input-field" >
+                        </div>
+                        <div class="sub-page-2-inputs">
+                            <span>TO </span>
+                            <input type="date" class="input-field" >
+                        </div>
+                        <div class="sub-page-2-select">
+                            <span>Stock Locations</span>
+                            <select name="" class="select-field">
+                                <option value="">All Location</option>
+                                <option value="">Branch Office</option>
+                                <option value="">Main Store</option>
+                                <option value="">Warehouse</option>
+                            </select>
+                        </div> 
+                        <div class="sub-page-2-select">
+                            <span></span>
+                            <select name="" class="select-field">
+                                <option value="">No Select Options</option>
+                            </select>
+                        </div> 
+                        <div class="sub-page2-buttons">
+                            <button type="submit" class="display">Display</button>
+                            <button type="submit" class="print">Print</button>
+                        </div>
+                    
+                    </form>
+                </div>
+            </div>
+            <div id="page3" class="page">
+                <div class="sub-page-3">
+                    <img src="../img/file-img.png" width="150" height="120" alt=""><br>
+                    <input type="file" class="company-file-field" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const pages = document.querySelectorAll('.page');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.target;
+
+                    pages.forEach(page => page.classList.remove('active'));
+
+                    const targetPage = document.getElementById(targetId);
+                    targetPage.classList.add('active');
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

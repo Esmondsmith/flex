@@ -152,7 +152,25 @@
           border-radius: 5px;
         }
     }
-    .sys-entry-selection{
+    /* inventory dropdown voucher prefix*/
+    .collapse {
+      display: none;
+    }
+
+    .collapse.show {
+      display: block;
+    }
+    .card {
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem;
+      background-color: #f0eded;
+      padding: 10px 5px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      color: black;
+      margin-top: -35px;
+    }
+    .sys-entry-selection {
       background-color: #f0eded;
       padding: 10px 5px;
       border-radius: 5px;
@@ -387,6 +405,10 @@
   padding: 20px 30px;
   border-radius: 5px;
   margin-bottom: 10px;
+    h2{
+      color: black;
+      margin: 20px 0px;
+    }
     button{
       border: none;
       background-color: #47a447;
@@ -394,6 +416,8 @@
       border-radius: 5px;
       color: white;
       font-size: 16px;
+      margin-top:15px;
+      cursor: pointer;
     }
 }
 
