@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>entries definition</title>
+    <title>system parameters</title>
 
     <link rel="stylesheet" href="admin.css">
-    <!-- <script type="text/javascript" src="admin.js" defer></script> -->
+    <script type="text/javascript" src="admin.js" defer></script>
     <link rel="stylesheet" href="../styles.css">
     <script type="text/javascript" src="../script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -110,13 +110,85 @@
         </ul>
     </aside>
     <main>
-        <div class="container"> 
-            <h2>AUTHORIZATION SETUP</h2>
-            <p>This program is suspended for now</p>
+        <div class="container">
+            <div class="sys-par-setting">
+                <h3>System Parameters Settings</h3>
+                <hr>
+                <div class="button-container">
+                    <button type="submit" class="btn">Save Settings</button>
+                </div>
+            </div>
+        
+            <div class="sys-voucher">
+                <h3>Voucher Prefix</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Parameter Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Last Depreciation Date</td>
+                            <td> <input type="text" name="" value="05/Aug/2019" class="entry-form-control"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="sys-voucher-number">
+                <h3>Last Voucher Number</h3>   
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleCollapse()"  height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-373.85 303.85-550h352.3L480-373.85Z"/></svg>
+            </div>
+            <div class="collapse" id="voucherDropId">
+                <div class="card">
+                    No records found
+                </div>
+            </div>
+        
+            <div class="sys-entry-selection">
+                <h3>Entry Selection</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Select Value</th>
+                            <th scope="col">Parameter Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <td>Display Gridlines On Reports</td>
+                            <td>  
+                                <select name="" id="" class="entry-form-select">
+                                    <option value="">No</option>
+                                    <option value="">Yes</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Currency Code</td>
+                            <td>  
+                                <select name="" id="" class="entry-form-select">
+                                    <option value="">Naira</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Menu View</td> 
+                            <td>  
+                                <select name="" id="" class="entry-form-select">
+                                    <option value="">Standard</option>
+                                    <option value="">Classic</option>
+                                    <option value="">Style 1</option>
+                                    <option value="">Style 2</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 </div>    
 </body>
 </html>
-
-    

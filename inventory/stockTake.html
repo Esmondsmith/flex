@@ -3,496 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Navigation</title>
-    <style>
-      
-/* INVENTORY MODULE - INVENTORY STOCK ITEM MANAGEMENT STYLING */
-/* Set a style for the buttons */
-.stock-item-buttons{
-  margin-bottom: 50px;
-}
-.stock-item-buttons button{
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  margin-right: 10px;
-}
-.save{
-  background-color: green;
-  border-radius: 4px;
-}
-.delete{
-  background-color: #cc0000;
-  border-radius: 4px;
-}
-.load{
-  background-color: dodgerblue;
-  border-radius: 4px;
-}  
-
-.stock-item-main-content{
-  background-color: #f0eded;
-  padding: 20px 30px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  color: black;
-    h3{
-      margin: 20px 0px;
-      font-size: 20px;
-    }
-    hr{
-      margin-bottom: 40px;
-    }
-}
-.stock-item-form{
-  min-width: 600px;
-}
-.stock-item-input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-    span{
-      width: 20%;
-        sup{
-          color: #cc0000 ;
-          font-weight: 700;
-        }
-    }
-    input[type='search']{
-      width: 41%;
-      padding: 8px;
-    }
-    button{
-      margin-left: 15px;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover{
-      background-color: #ccc;
-      padding: 0px 3px;
-    }
-}
-  
-.stock-item-icon {
-  padding: 6px;
-  background: #ccc;
-  color: rgb(84, 81, 81);
-  min-width: 40px;
-  text-align: center;
-  font-size: 20px;
-}
-  
-.stock-item-input-field, .stock-item-select-field{
-  padding: 8px;
-  outline: none;
-  width: 35%;
-  border: none;
-}
-.stock-item-input-field:focus, .stock-item-select-field:focus {
-  border: 2px solid #ccc;
-}
-.stock-item-card {
-  border-radius: 0.25rem;
-  background-color: #f0eded;
-  border-radius: 5px;
-  color: black;
-  margin-top: -35px;
-    h3{
-      margin-top: 80px;
-    }
-}
-
-.stock-item-navigation{
-  background-color: #f0eded;
-  padding: 20px 30px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  color: black;
-    hr{
-      margin: 20px 0px;
-    }
-    .navigation{
-      background-color: #cc0000 ;
-      border-radius: 5px;
-    }
-    button{
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: 600;
-      border-radius: 8px;
-      color: white;
-    }
-}
-  /* Navigation Buttons */
-.nav-btn {
-    padding: 5px 20px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-}
-.nav-btn:hover {
-    background-color: white;
-    color: #cc0000;
-}
-.nav-btn:active {
-  background-color: white;
-  color: #cc0000;
-}
-/* Pages */
-.page {
-    display: none;
-    text-align: center;
-    animation: fadeIn 0.5s ease; 
-}
-.page.active {
-    display: block; /* Show the active page */
-}
-
-/* for all three sub pages body styles */
-.sub-page-1 {
-  border-radius: 0.25rem;
-  background-color: #f0eded;
-  border-radius: 5px;
-  color: black;
-    h3{
-      margin-top: 30px;
-      border: 2px solid red;
-      text-align: left;
-      padding: 5px;
-      width: 25%;
-      font-size: 16px;
-    }
-}
-.sub-page-1input{
-  display: flex;
-  margin-bottom: 15px;
-  span{
-    width: 30%;
-    text-align: start;
-    font-size: 16px;
-      sup{
-        color: #cc0000 ;
-        font-weight: 700;
-      }
-  }
-  input {
-    padding: 8px;
-    outline: none;
-    width: 35%;
-    border: none;
-    border-radius: 6px;
-  }
-  select{
-    padding: 8px;
-    outline: none;
-    width: 37%;
-    border: none;
-    border-radius: 6px;
-  } 
-}
-
-/* sub-page-2-styling */
-.sub-page-2-form{
-  min-width: 600px;
-  margin-top: 50px;
-  }
-  .sub-page-2-inputs {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    width: 100%;
-    margin-bottom: 15px;
-      span{
-        text-align: start;
-        margin-right: 20px;
-        width: 25%;
-      }
-  }
-  .sub-page-2-select{
-    display: flex;
-    width: 100%;
-    margin-bottom: 15px;
-      span{
-        margin-right: 20px;
-        width: 25%;
-        text-align: start;
-      }
-  }
-  .select-field{
-    padding: 8px;
-    outline: none;
-    width: 57%;
-    border: none;
-    border-radius:5px;
-  }
-  .input-field{
-    padding: 8px;
-    outline: none;
-    width: 55%;
-    border: none;
-    border-radius:5px;
-  }
-  .input-field:focus {
-    border: 2px solid #ccc;
-  }
-  .sub-page2-buttons{
-    display: flex;
-    justify-content: start;
-    button{
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-  }
-  .display{
-    background-color: green;
-  }
-  .print{
-    background-color: dodgerblue;
-  }
-  /* For sub-page 3 styling */
-  .sub-page-3{
-    text-align: start;
-    margin-top: 50px;
-  }
-    </style>
+    <title>INVENTORY DASHBOARD</title>
+    <link rel="stylesheet" href="inventory.css">
+    <script type="text/javascript" src="inventory.js" defer></script>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google icons svg used --> 
 </head>
 <body>
-    <div class="stock-item-main-content">
-        <h3>Stock Item Management</h3>
-        <hr>
-        <form action="#" id="formContainer" class="stock-item-form">
-            <div class="stock-item-buttons">
-                <button type="submit" class="save">Save</button>
-                <button type="submit" class="delete">Delete</button>
-                <button type="submit" class="load"> Load Stock Items From Excel</button>
-            </div>
-            <div class="stock-item-input-container">
-                <span>Item Code <sup>*</sup> </span>
-                <i class="fa-solid fa-magnifying-glass stock-item-icon"></i>
-                <input type="search" id="searchItem" class="stock-item-input-field" >
-                <button onclick="toggleCollapseStockItems()" id="stockBtn"> Expand <i class="fa-solid fa-circle-chevron-down"></i> </button>
-            </div>        
-            <div class="collapse" id="voucherDropId">
-                <div class="stock-item-card">
-                    <form action="" id="hidden-form">
-                        <h3>Voucher Lookup Box</h3>
-                        <hr>
-                        <div class="stock-item-input-container">
-                            <span>Item Code </span>
-                            <input type="text" id="textItem" class="stock-item-input-field" >
-                        </div>
-                        <div class="stock-item-input-container">
-                            <span>Description </span>
-                            <input type="text" class="stock-item-input-field" >
-                        </div>
-                        <div class="stock-item-input-container">
-                            <span>Item Group: </span>
-                            <select name="" class="stock-item-select-field">
-                                <option value="">Bags</option>
-                                <option value="">Chicken Flavour</option>
-                                <option value="">Database</option>
-                                <option value="">Laptop</option>
-                                <option value="">Leather</option>
-                                <option value="">Paracetamol</option>
-                                <option value="">Stock Item</option>
-                                <option value="">Syrup</option>
-                                <option value="">Table</option>
-                                <option value="">vv</option>
-                            </select>
-                        </div>
-                        <div class="stock-item-input-container">
-                            <span>Item Sub Group: </span>
-                            <select name="" class="stock-item-select-field">
-                                <option value="">Chair</option>
-                                <option value="">GSM</option>
-                                <option value="">Rubber</option>
-                                <option value="">Stock Item</option>
-                                <option value="">Table</option>
-                            </select>
-                        </div>  
-                    </form>
-                </div>
-            </div>
-        </form>
+
+<header id="top-header">
+    <div class="top-logo">
+        <img src="../img/flexlogo1.png" alt="company logo" width="80" height="40">
     </div>
-    <div class="stock-item-navigation">
-      <hr>
-      <div class="navigation">
-          <button class="nav-btn" id="page1Btn" data-target="page1">Stock Item Details</button>
-          <button class="nav-btn" id="page2Btn" data-target="page2">Stock Item Transaction</button>
-          <button class="nav-btn" id="page3Btn" data-target="page3">Images</button>
+    <div class="admin-pics" style="position: relative;">
+        <span class="notice-bell-dropdown">
+            <a href="#" title="More Details" class="more-details">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
+            <span class="top-notice">More</span>
+                <div class="notice-bell-menu">
+                    <a href="#" style="font-weight: 600;"><i class="fa-solid fa-lock fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp;&nbsp;User Name <br> <p style="text-align: center; color: grey;">Admin</p> </a>
+                    <hr>
+                    <a href="#" style="font-weight: 600;"><i class="fa-solid fa-arrow-trend-up fa-lg" style="margin-left: 20px;"></i> &nbsp;&nbsp; Account Year<br> <p style="text-align: center; color: grey;" id="notice-bell-drop"></p> </a>
+                    <hr>
+                    <a href="#" style="font-weight: 600;"><i class="fa-regular fa-money-bill-1 fa-lg"  style="margin-left: 20px;"></i> &nbsp;&nbsp; Base Currency <br> <p style="text-align: center; color: grey;">Naira</p> </a>
+                </div>
+            </a>
+        </span> 
+        <div class="vertical-line"></div>
+        <span class="dropdown">
+            <img src="../img/pro2.png" alt="admin photo" width="33" height="33" >        
+            <small>Admin</small>
+            <i class="fa-solid fa-chevron-down fa-xs"></i>
+            <div class="dropdown-menu">
+                <a href="#settings"><i class="fa-solid fa-lock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
+                <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;&nbsp; Logout</a>
+            </div>
+        </span> 
+    </div>
+</header>
+<div class="body-wrapper">
+    <aside id="sidebar">
+        <h4 >WELCOME BACK ADMIN</h4>
+        <ul>
+            <li>
+                <span class="back-home">
+                    <a href="#"> INVENTORY <br> DASHBOARD </a>
+                </span>
+                <button id="toggle-btn" onclick=toggleSidebar()>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                </button>
+            </li>
+            <li >
+                <a href="../module.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#5f6368"><path d="M627-520h133v-160H627v160Zm-214 0h133v-160H413v160Zm-213 0h133v-160H200v160Zm0 240h133v-160H200v160Zm213 0h133v-160H413v160Zm214 0h133v-160H627v160Zm-507 0v-400q0-33 23.5-56.5T200-760h560q33 0 56.5 23.5T840-680v400q0 33-23.5 56.5T760-200H200q-33 0-56.5-23.5T120-280Z"/></svg>
+                <span>Module List</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="inventory.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#5f6368"><path d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z"/></svg>
+                <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <button onclick="toggleSubMenu(this)" class="dropdown-btn"  title="Settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M672-288q25 0 42.5-17.5T732-348q0-25-17.5-42.5T672-408q-25 0-42.5 17.5T612-348q0 25 17.5 42.5T672-288Zm-.09 120Q704-168 731-184t43-42q-23-13-48.72-19.5t-53.5-6.5q-27.78 0-53.28 7T570-226q16 26 42.91 42 26.91 16 59 16ZM480-96q-133-30-222.5-150.5T168-515v-229l312-120 312 120v221q-22-10-39-16t-33-8v-148l-240-92-240 92v180q0 49 12.5 96t36.5 88.5q24 41.5 58.5 76T425-194q8 23 25.5 48.5T489-98l-4.5 1-4.5 1Zm191.77 0Q592-96 536-152.23q-56-56.22-56-136Q480-368 536.23-424q56.22-56 136-56Q752-480 808-423.77q56 56.22 56 136Q864-208 807.77-152q-56.22 56-136 56ZM480-480Z"/></svg>
+                    <span>Settings</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div> 
+                        <li> <a href="entriesDef.html">Entries Definition</a> </li>
+                        <li> <a href="inventPara.html">Inventory Parameters</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn"  title="Stocks" >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#5f6368"><path d="M192-192v-96l72-72v168h-72Zm126 0v-222l66-66 6 6v282h-72Zm126 0v-228l72 72v156h-72Zm126 0v-186l72-72v258h-72Zm126 0v-312l72-72v384h-72ZM192-378v-102l192-192 144 144 240-240v102L528-426 384-570 192-378Z"/></svg>
+                    <span>Stocks</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li> <a href="stockItemMgt.html">Stock Item Management</a> </li>
+                        <li> <a href="stockTake.html">Stock Take</a> </li>
+                        <li> <a href="barcode.html">Print Barcode Tags</a> </li>
+                        <li> <a href="openingStocks.html">Enter Opening Stock Balances</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn" title="Transactions">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M360-600v-72h336v72H360Zm0 120v-72h336v72H360Zm144 312H216h288Zm0 72H240q-40 0-68-28t-28-68v-144h96v-528h576v361q-20 1-38 7t-34 19v-315H312v456h289l-72 72H216v72q0 10.2 6.9 17.1 6.9 6.9 17.1 6.9h264v72Zm72 0v-113l210-209q7.26-7.41 16.13-10.71Q811-432 819.76-432q9.55 0 18.31 3.5Q846.83-425 854-418l44 45q6.59 7.26 10.29 16.13Q912-348 912-339.24t-3.29 17.92q-3.3 9.15-10.71 16.32L689-96H576Zm288-243-45-45 45 45ZM624-144h45l115-115-22-23-22-22-116 115v45Zm138-138-22-22 44 45-22-23Z"/></svg>
+                    <span>Transactions</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li> <a href="tranNote.html">Goods Received Note</a> </li>
+                        <li> <a href="tranIssue.html">Stock Issue</a> </li>
+                        <li> <a href="tranTransfer.html">Stock Transfer</a> </li>
+                        <li> <a href="tranWriting.html">Writing</a> </li>
+                        <li> <a href="tranDispatch.html">Goods Dispatch Note</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn" title="Report">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/></svg>
+                    <span>Reports</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li> <a href="reportMax.html">Items Above Maximum Levels</a> </li>
+                        <li> <a href="reportReorder.html">Items Below ReOrder Levels</a> </li>
+                        <li> <a href="reportReserve.html">Items Below Reserve Level</a> </li>
+                        <li> <a href="reportDangerLevel.html">Items Below Danger Levels</a> </li>
+                        <li> <a href="reportValuation.html">Stock Valuation Report</a> </li>
+                        <li> <a href="reportBalance.html">List Stock Balances</a> </li>
+                        <li> <a href="reportLocation.html">List Stock Balances by Locations</a> </li>
+                        <li> <a href="reportBalProducts.html">List Stock Balances by Products</a> </li>
+                    </div>
+                </ul>
+            </li>
+            <li style="position: relative;">
+                <a href="calendar.html" title="Account Year" >
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                <span id="calendar-notice"> </span>
+                <span>Account Year</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+    <div class="container">
+        <div class="stock-item-main-content">
+          <h3>Stock Take</h3>
+          <hr>
+          <form id="formContainer" class="stock-item-form">
+              <div class="stock-item-buttons">
+                  <button type="submit" class="save">Save</button>
+                  <button type="submit" class="delete">Delete</button>
+                  <button type="submit" class="printBtn">Print</button>
+                  <button type="submit" class="newBtn">New</button>
+                  <button type="submit" class="load"> Load Grid From Excel</button>
+              </div>
+              <div class="stock-item-input-container">
+                  <span>Voucher Number <sup>*</sup> </span>
+                  <i class="fa-solid fa-magnifying-glass stock-item-icon"></i>
+                  <input type="search" id="searchItem" class="stock-item-input-field" >
+                  <a href="#" onclick="toggleExpandStockItems()" id="stockBtn"> Expand <i class="fa-solid fa-circle-chevron-down"></i> </a>
+              </div>        
+              <div class="collapse" id="closeUpDownId">
+                  <div class="stock-item-card">
+                      <form action="" id="hidden-form">
+                          <h3>Voucher Lookup Box</h3>
+                          <hr>
+                          <div class="stock-item-input-container">
+                              <span>Voucher Number  </span>
+                              <input type="text" class="stock-item-input-field" >
+                          </div>
+                          <div class="stock-item-input-container">
+                              <span>Voucher Date </span>
+                              <input type="date" class="stock-item-input-field" >
+                              <a href="#"> <i class="fa-solid fa-magnifying-glass stock-item-icon"></i></a>
+                          </div>
+                          <div class="stock-item-input-container">
+                            <span>Description</span>
+                            <input type="text" class="stock-item-input-field" >
+                          </div>
+                      </form>
+                      <table class="stock-item-table">
+                          <thead>
+                              <colgroup>
+                                  <col style="width: 7%;"> 
+                                  <col style="width: 23%;"> 
+                                  <col style="width: 20%;"> 
+                                  <col style="width: 50%;"> 
+                              </colgroup>
+                              <tr>
+                                  <th scope="col">S/N</th>
+                                  <th scope="col">Voucher Number</th>
+                                  <th scope="col">	Voucher Date</th>
+                                  <th scope="col">Description</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td scope="row">1</td>
+                                  <td><a href="#">85674743</a></td>
+                                  <td>12/5/2024</td>
+                                  <td>anything</td>
+                              </tr>
+                              <tr>
+                                  <td scope="row">2</td>
+                                  <td><a href="#">536353434</a></td>
+                                  <td>12/5/2024</td>
+                                  <td>foods</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </form>
       </div>
-      <div class="pages">
-          <div id="page1" class="page active">
-              <div class="sub-page-1">
-                  <form action="" id="hidden-form">
-                      <h3> <input type="checkbox" name="" id=""> Create as Serialised Item</h3>
-                      <hr>
-                      <div class="sub-page-1input">
-                          <span>Item Description <sup>*</sup></span>
-                          <input type="text" >
-                      </div>
-                      <div class="sub-page-1input">
-                          <span>Item Sizes (Seperate with comma) <sup>*</sup></span>
-                          <input type="text" >
-                      </div>
-                      <div class="sub-page-1input">
-                          <span>Item Group </span>
-                          <select name="">
-                              <option value="">Bags</option>
-                              <option value="">Chicken Flavour</option>
-                              <option value="">Database</option>
-                              <option value="">Laptop</option>
-                              <option value="">Leather</option>
-                              <option value="">Paracetamol</option>
-                              <option value="">Stock Item</option>
-                              <option value="">Syrup</option>
-                              <option value="">Table</option>
-                              <option value="">vv</option>
-                          </select>
-                      </div>
-                      <div class="sub-page-1input">
-                          <span>Reorder Level <sup>*</sup> </span>
-                          <input type="text" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Danger Level <sup>*</sup> </span>
-                          <input type="text" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Manufacture Date <sup>*</sup> </span>
-                          <input type="date" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Unit Of Measure <sup>*</sup> </span>
-                          <input type="text" >
-                      </div>  
-                      <div class="sub-page-1input">
-                          <span>UPC <sup>*</sup></span>
-                          <input type="text" >
-                      </div>
-                      <div class="sub-page-1input">
-                          <span>Item Sub Group</span>
-                          <select name="">
-                              <option value="">Chair</option>
-                              <option value="">GSM </option>
-                              <option value="">Rubber</option>
-                              <option value="">Stock Item</option>
-                              <option value="">Table</option>
-                          </select>
-                      </div>
-                      <div class="sub-page-1input">
-                          <span>Reserve Level<sup>*</sup> </span>
-                          <input type="text" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Maximum Level </span>
-                          <input type="text" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Expiration Date </span>
-                          <input type="date" >
-                      </div> <div class="sub-page-1input">
-                          <span>Alt Unit Of Measure</span>
-                          <input type="text" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Opening Balance </span>
-                          <input type="text" >
-                      </div> 
-                      <div class="sub-page-1input">
-                          <span>Opening Balance Location</span>
-                          <select name="">
-                              <option value="">Branch Office</option>
-                              <option value="">Main Store</option>
-                              <option value="">Wharehouse</option>
-                          </select>
-                      </div> 
-                  </form>
-              </div>
+      
+      <div class="stock-take-description">
+        <div class="description">
+          <div class="description-area">
+            <span> Description: </span>
+            <textarea name="" id="" placeholder="Enter Description"></textarea>
           </div>
-          <div id="page2" class="page">
-              <div class="sub-page-2">
-                  <form action="#" class="sub-page-2-form">
-                      <div class="sub-page-2-inputs">
-                          <span>FROM </span>
-                          <input type="date" class="input-field" >
-                      </div>
-                      <div class="sub-page-2-inputs">
-                          <span>TO </span>
-                          <input type="date" class="input-field" >
-                      </div>
-                      <div class="sub-page-2-select">
-                          <span>Stock Locations</span>
-                          <select name="" class="select-field">
-                              <option value="">All Location</option>
-                              <option value="">Branch Office</option>
-                              <option value="">Main Store</option>
-                              <option value="">Wharehouse</option>
-                          </select>
-                      </div> 
-                      <div class="sub-page-2-select">
-                          <span></span>
-                          <select name="" class="select-field">
-                              <option value="">No Select Options</option>
-                          </select>
-                      </div> 
-                      <div class="sub-page2-buttons">
-                          <button type="submit" class="display">Display</button>
-                          <button type="submit" class="print">Print</button>
-                      </div>
-                  
-                  </form>
-              </div>
+          <div class="description-select">
+            <span>Stock Location: </span>
+            <select name="" id="">
+              <option value=""></option>
+              <option value="">Branch Office</option>
+              <option value="">Main Store</option>
+              <option value="">Warehouse </option>
+            </select>
           </div>
-          <div id="page3" class="page">
-              <div class="sub-page-3">
-                  <img src="../img/file-img.png" width="150" height="120" alt=""><br>
-                  <input type="file" class="company-file-field" >
-              </div>
+        </div>
+        <div class="voucher-date">
+          <div class="voucher">
+            <span>Voucher Date:</span>
+            <input type="date" name="" id="">
           </div>
+          <div class="voucher-link">
+            <a href="#">Click Here to Auto fill the items with zero</a>
+          </div>
+        </div>
       </div>
-  </div>
-    
-    <script>
-      function toggleCollapseStockItems() {
-  var collapseElement = document.getElementById('voucherDropId');
-  var stockBtnText = document.getElementById('stockBtn');
-  if(collapseElement.classList.toggle('show')){
-    stockBtnText.innerHTML = "Close <i class='fa-solid fa-circle-chevron-up'></i>"
-  } else {
-    stockBtnText.innerHTML = "Expand <i class='fa-solid fa-circle-chevron-down'></i>"
-  }
-  // collapseElement.classList.toggle('show');
-} 
 
-        // Select all navigation buttons
-        const navButtons = document.querySelectorAll('.nav-btn');
-        // Select all pages
-        const pages = document.querySelectorAll('.page');
-
-        // Attach click event listener to each button
-        navButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.dataset.target; // Get the target page ID
-
-                // Hide all pages
-                pages.forEach(page => page.classList.remove('active'));
-
-                // Show the target page
-                const targetPage = document.getElementById(targetId);
-                targetPage.classList.add('active');
-            });
-        });
-    </script>
+      <div class="stock-take-table-wrapper">
+        <h3>Stock Take Items</h3>
+        <hr>
+        <a href="#" class="add-line">ADD LINE</a>
+        <table class="stock-take-table">
+            <thead>
+                <colgroup>
+                    <col style="width: 5%;"> 
+                    <col style="width: 5%;"> 
+                    <col style="width: 5%;"> 
+                    <col style="width: 10%;">
+                    <col style="width: 10%;"> 
+                    <col style="width: 7%;"> 
+                    <col style="width: 10%;"> 
+                    <col style="width: 8%;"> 
+                    <col style="width: 20%;"> 
+                </colgroup>
+                <tr>
+                    <th scope="col">S/N</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Stock Item</th>
+                    <th scope="col">Item Code</th>
+                    <th scope="col"> Unit Qty</th>
+                    <th scope="col">Alt Unit Qty</th>
+                    <th scope="col">Item Size</th>
+                    <th scope="col">Stock Take Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td> <a href="">Edit</a> </td>
+                    <td> <a href="#">Delete?</a> </td>
+                    <td></td>
+                    <td>5657464</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td></td>
+                    <td>0.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </main>
+</div>
 </body>
 </html>
